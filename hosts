@@ -1,0 +1,25 @@
+127.0.0.1	localhost
+::1		localhost ip6-localhost ip6-loopback
+ff02::1		ip6-allnodes
+ff02::2		ip6-allrouters
+
+
+# real hardware
+10.0.0.2		sammy sammy.lpnetca
+10.0.0.5		accumulus accumulus.lpnet.ca
+10.0.0.7		wynn wynn.lpnet.ca
+10.0.0.9		hyperbox hyperbox.lpnet.ca
+
+# VMs
+10.0.0.26		wendy wendy.lpnet.ca
+10.0.0.28		harvey harvey.lpnet.ca
+
+# Raspberry Pi's
+10.0.0.30		blueberry blueberry.lpnet.ca
+10.0.0.32		cherry cherry.lpnet.ca
+10.0.0.35		raspberrypi raspberrypi.lpnet.ca
+10.0.0.36		cranberry cranberry.lpnet.ca
+10.0.0.37		blackberry blackberry.lpnet.ca
+
+
+
