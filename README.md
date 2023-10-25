@@ -5,7 +5,7 @@ config files and NetSIG DNSMasq presentation documentation
 RPiSystem.png
 ### Tux!
 
-![tux!](https://www.markdownguide.org/assets/images/tux.png) 
+![tux!](https://www.markdownguide.org/assets/images/tux.png) ![Raspberry Pi](RPiSystem.png)
 ### Installation
 install dnsmasq application, and dmsutils so you can see what's going on
 ```
