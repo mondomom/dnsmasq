@@ -1,8 +1,8 @@
-# dnsmasq
+# dnsmasq ![Raspberry Pi](images/raspitr.png)
 config files and NetSIG DNSMasq presentation documentation
-== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).
-== cool picture :
-![Raspberry Pi](images/Raspberry_Pi_OS_Logo.png)
+
+== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)
+
 ### Installation
 install dnsmasq application, and dmsutils so you can see what's going on
 ```
