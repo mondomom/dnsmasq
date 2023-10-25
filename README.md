@@ -1,10 +1,10 @@
 # dnsmasq ![Raspberry Pi](images/raspitr.png)
 config files and NetSIG DNSMasq presentation documentation
 
-== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)
+***Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)***
 
 ### Installation
-install dnsmasq application, and dmsutils so you can see what's going on
+install dnsmasq application, and dnsutils so you can see what's going on
 ```
 apt install dnsmasq
 apt install dnsutils
@@ -47,7 +47,7 @@ DNS seems to need some kind of domain name.  There seems to be only one strictly
 
 There is some indication that .local might still be OK but there are issues with multicast-DNS (?? What is that, anyway??)
 
-.play and .home have been taken.
+.play and .home have been taken
 
 .example, .invalid, .localhost, and .test are also reserved names, but I didn't like any of them, so I bought lpnet.ca
 
