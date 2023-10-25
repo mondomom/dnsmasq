@@ -38,6 +38,19 @@ Now I can see where the cname directs to:
 
 ```
 nslookup mywiki.lpnet.ca
+```
+
+Another thing to note:
+
+DNS seems to need some kind of domain name.  There seems to be only one strictly legal unregistered domain name that someone can use for their home network, and that's home.arpa  (RFC 8375) assigned in 2018
+
+There is some indication that .local might still be OK but there are issues with multicast-DNS (?? What is that, anyway??)
+
+.play and .home have been taken.
+
+.example, .invalid, .localhost, and .test are also reserved names, but I didn't like any of them, so I bought lpnet.ca
+
+
 
 =======
 == Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).
