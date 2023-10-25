@@ -4,13 +4,13 @@ config files and NetSIG DNSMasq presentation documentation
 == cool picture to find:
 RPiSystem.png
 
-=== Installation
+### Installation
 install dnsmasq application, and dmsutils so you can see what's going on
 ```
 apt install dnsmasq
 apt install dnsutils
 ```
-=== Configuration
+### Configuration
 There are only two files that need to be edited:
 
 one is /etc/dnsmasq.conf and the other is /etc/hosts
@@ -24,9 +24,9 @@ grep -v "^#" dnsmasq.conf | grep -v "^$"
 There is a service that runs on the server called dnsmasq and it's controlled by systemd (sorry, everyone ;)
 
 ```
-systemctl status dnsmasq.service
+systemctl status dnsmasq.servic
+```
 
-```.
 I found out that dnsmasq will also do cnames.  I haave a wiki, mywiki, that I want to access by the wiki name (mywiki.lpnet.ca) instead of theserver name (wendy.lpnet.ca).
 
 in the /etc/dnsmasq.conf file, I added cname=desired_name,real_name
