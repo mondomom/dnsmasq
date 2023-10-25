@@ -53,9 +53,9 @@ There is some indication that .local might still be OK but there are issues with
 
 
 
-=======
-== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).
-== cool picture to find:
+=======  
+== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).  
+== cool picture to find:  
 RPiSystem.png
 
 
