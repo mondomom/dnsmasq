@@ -21,6 +21,8 @@ cool "grep" command to show config files without comments or empty lines:
 grep -v "^#" dnsmasq.conf | grep -v "^$"
 ```
 
+**Note, though, that the dnsmasq.conf file contains lots of good info**
+
 There is a service that runs on the server called dnsmasq and it's controlled by systemd (sorry, everyone ;)
 
 ```
