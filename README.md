@@ -1,3 +1,7 @@
+# this documentation is available on:  
+
+# https://www.github.com/mondomom/dnsmasq.git
+
 # dnsmasq ![Raspberry Pi](images/raspitr.png)
 config files and NetSIG DNSMasq presentation documentation
 
@@ -25,10 +29,10 @@ grep -v "^#" dnsmasq.conf | grep -v "^$"
 There is a service that runs on the server called dnsmasq and it's controlled by systemd (sorry, everyone ;)
 
 ```
-systemctl status dnsmasq.servic
+systemctl status dnsmasq.service
 ```
 
-I found out that dnsmasq will also do cnames.  I haave a wiki, mywiki, that I want to access by the wiki name (mywiki.lpnet.ca) instead of theserver name (wendy.lpnet.ca).
+I found out that dnsmasq will also do cnames.  I have a wiki, mywiki, that I want to access by the wiki name (mywiki.lpnet.ca) instead of theserver name (wendy.lpnet.ca).
 
 in the /etc/dnsmasq.conf file, I added cname=desired_name,real_name
 ```
