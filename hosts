@@ -5,9 +5,10 @@ ff02::2		ip6-allrouters
 
 
 # real hardware
-10.0.0.2		sammy sammy.lpnetca
+10.0.0.2		sammy sammy.lpnet.ca
 10.0.0.5		accumulus accumulus.lpnet.ca
 10.0.0.7		wynn wynn.lpnet.ca
+10.0.0.8		wynn11 wynn11.lpnet.ca
 10.0.0.9		hyperbox hyperbox.lpnet.ca
 
 # VMs
@@ -21,5 +22,6 @@ ff02::2		ip6-allrouters
 10.0.0.36		cranberry cranberry.lpnet.ca
 10.0.0.37		blackberry blackberry.lpnet.ca
 
-
+# Kubernetes Stuff
+10.0.0.81		katy1 katy1.lpnet.ca
 
