@@ -1,0 +1,9 @@
+[lynn@fedora dnsmasq]$ grep -v "^#" dnsmasq.conf | grep -v "^$"
+server=8.8.8.8
+local=/lpnet.ca/
+domain=lpnet.ca
+cache-size=1500
+cname=mywiki.lpnet.ca,wendy.lpnet.ca
+dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
+dhcp-reply-delay=tag:client_is_a_pi,2
+[lynn@fedora dnsmasq]$ 

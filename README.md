@@ -1,11 +1,14 @@
-# dnsmasq
+# this documentation is available on:  
+
+# https://www.github.com/mondomom/dnsmasq.git
+
+# dnsmasq ![Raspberry Pi](images/raspitr.png)
 config files and NetSIG DNSMasq presentation documentation
-== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).
-== cool picture to find:
-RPiSystem.png
+
+***Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)***
 
 ### Installation
-install dnsmasq application, and dmsutils so you can see what's going on
+install dnsmasq application, and dnsutils so you can see what's going on
 ```
 apt install dnsmasq
 apt install dnsutils
@@ -26,10 +29,10 @@ grep -v "^#" dnsmasq.conf | grep -v "^$"
 There is a service that runs on the server called dnsmasq and it's controlled by systemd (sorry, everyone ;)
 
 ```
-systemctl status dnsmasq.servic
+systemctl status dnsmasq.service
 ```
 
-I found out that dnsmasq will also do cnames.  I haave a wiki, mywiki, that I want to access by the wiki name (mywiki.lpnet.ca) instead of theserver name (wendy.lpnet.ca).
+I found out that dnsmasq will also do cnames.  I have a wiki, mywiki, that I want to access by the wiki name (mywiki.lpnet.ca) instead of theserver name (wendy.lpnet.ca).
 
 in the /etc/dnsmasq.conf file, I added cname=desired_name,real_name
 ```
@@ -48,15 +51,15 @@ DNS seems to need some kind of domain name.  There seems to be only one strictly
 
 There is some indication that .local might still be OK but there are issues with multicast-DNS (?? What is that, anyway??)
 
-.play and .home have been taken.
+.play and .home have been taken
 
 .example, .invalid, .localhost, and .test are also reserved names, but I didn't like any of them, so I bought lpnet.ca
 
 
 
-=======
-== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).
-== cool picture to find:
+=======  
+== Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).  
+== cool picture to find:  
 RPiSystem.png
 
 
