@@ -10,8 +10,8 @@ config files and NetSIG DNSMasq presentation documentation
 ### Installation
 install dnsmasq application, and dnsutils so you can see what's going on
 ```
-apt install dnsmasq
-apt install dnsutils
+sudo apt install dnsmasq
+sudo apt install dnsutils
 ```
 ### Configuration
 There are only two files that need to be edited:
