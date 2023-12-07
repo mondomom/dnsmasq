@@ -13,7 +13,7 @@ install dnsmasq application, and dnsutils so you can see what's going on
 sudo apt install dnsmasq
 sudo apt install dnsutils
 ```
-### Configuration
+### Server Configuration
 There are only two files that need to be edited:
 
 one is /etc/dnsmasq.conf and the other is /etc/hosts
@@ -23,9 +23,50 @@ cool "grep" command to show config files without comments or empty lines:
 ```
 grep -v "^#" dnsmasq.conf | grep -v "^$"
 ```
+Here's dnsmasq.conf:
+```
+lynn@fedora:~/MyCode/dnsmasq$ grep -v "^#" dnsmasq.conf | grep -v "^$"
+server=8.8.8.8
+local=/lpnet.ca/
+domain=lpnet.ca
+cache-size=1500
+cname=mywiki.lpnet.ca,wendy.lpnet.ca
+dhcp-mac=set:client_is_a_pi,B8:27:EB:*:*:*
+dhcp-reply-delay=tag:client_is_a_pi,2
+```
 
 **Note, though, that the dnsmasq.conf file contains lots of good info**
 
+Here's /etc/hosts:
+```
+127.0.0.1       localhost
+::1             localhost ip6-localhost ip6-loopback
+ff02::1         ip6-allnodes
+ff02::2         ip6-allrouters
+
+
+# real hardware
+10.0.0.2                sammy sammy.lpnet.ca
+10.0.0.5                accumulus accumulus.lpnet.ca
+10.0.0.7                wynn wynn.lpnet.ca
+10.0.0.8                wynn11 wynn11.lpnet.ca
+10.0.0.9                hyperbox hyperbox.lpnet.ca
+
+# VMs
+10.0.0.26               wendy wendy.lpnet.ca
+10.0.0.28               harvey harvey.lpnet.ca
+
+# Raspberry Pi's
+10.0.0.30               blueberry blueberry.lpnet.ca
+10.0.0.32               cherry cherry.lpnet.ca
+10.0.0.35               raspberrypi raspberrypi.lpnet.ca
+10.0.0.36               cranberry cranberry.lpnet.ca
+10.0.0.37               blackberry blackberry.lpnet.ca
+
+# Kubernetes Stuff
+10.0.0.81               katy1 katy1.lpnet.ca
+
+```
 There is a service that runs on the server called dnsmasq and it's controlled by systemd (sorry, everyone ;)
 
 ```
@@ -44,6 +85,12 @@ Now I can see where the cname directs to:
 ```
 nslookup mywiki.lpnet.ca
 ```
+
+
+=== Host Configuration
+  * each host in my network (the way it is so far) needs to have the DNS IP address added to it.
+  * I've found that it's easier to do this on each host once, than forever looking up addresses, but YMMV
+  * 
 
 Another thing to note:
 
