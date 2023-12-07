@@ -115,7 +115,11 @@ There is some indication that .local might still be OK but there are issues with
 
 .example, .invalid, .localhost, and .test are also reserved names, but I didn't like any of them, so I bought lpnet.ca
 
-
+## Conclusion
+  * setting up dnsmasq was quick and easy
+  * I only have to enter IP addresses once into the hosts file on the dnsmasq server
+  * It could be added onto in the future, if I decide to add dhcp
+  * Also, dnsmasq is used with some other services so getting familiar with it could have added benefits
 
 =======  
 == Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now).  
