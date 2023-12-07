@@ -7,6 +7,12 @@ config files and NetSIG DNSMasq presentation documentation
 
 ***Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)***
 
+I have a lot of Pi's, and a fair few VMs in addition to the usual workstations and laptops.
+  * it was frustrating keeping track of each IP address
+  * there are some things I'd like to do that would benefit from being able to use FQDNs on my network.
+  * I had a spare Raspberry Pi 3B not doing anything.  It's turned out to be more than powerful enough for dnsmasq.
+  * This project was quick and easy, so I could get on to the stuff I really wanted to play with.
+
 ### Installation
 install dnsmasq application, and dnsutils so you can see what's going on
 ```
@@ -79,13 +85,20 @@ in the /etc/dnsmasq.conf file, I added cname=desired_name,real_name
 ```
 cname = mywiki.lpnet.ca,wendy.lpnet.ca
 ```
+First, restart the service:
+
+```
+systemctl restart dnsmasq.service
+```
 
 Now I can see where the cname directs to:
 
 ```
 nslookup mywiki.lpnet.ca
 ```
-
+  * a bit of an interesting gotcha - I set up a cname, then tried it out on the dnsmasq server.  It didn't work because I hadn't set the dns server in resolv.conf.
+  * I tried it from another of my systems and it worked fine.
+  * 
 
 === Host Configuration
   * each host in my network (the way it is so far) needs to have the DNS IP address added to it.
