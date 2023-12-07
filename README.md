@@ -96,14 +96,14 @@ Now I can see where the cname directs to:
 ```
 nslookup mywiki.lpnet.ca
 ```
-  * a bit of an interesting gotcha - I set up a cname, then tried it out on the dnsmasq server.  It didn't work because I hadn't set the dns server in resolv.conf.
+  * a bit of an interesting gotcha - I set up a cname, then tried it ping it from the dnsmasq server.  It didn't work because I hadn't set the dns server in resolv.conf.
   * I tried it from another of my systems and it worked fine.
-  * 
+  * bonus feature - you can add multiple cname lines to the .conf file
 
-=== Host Configuration
+##Host Configuration
   * each host in my network (the way it is so far) needs to have the DNS IP address added to it.
   * I've found that it's easier to do this on each host once, than forever looking up addresses, but YMMV
-  * 
+  * for most Linux type flavours that I've worked with, editing /etc/resolv.conf works OK.  Once you get into bookworm, though, you need to deal with network manager.  There is a command line tool called nmtui that is a sort of graphical command line tool that makes dealing with network manager way easier than the included nmcli command.
 
 Another thing to note:
 
