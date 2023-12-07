@@ -8,10 +8,13 @@ config files and NetSIG DNSMasq presentation documentation
 ***Note that I'm not using DNSMasq for dhcp.  That's taken care of by my router (for now)***
 
 I have a lot of Pi's, and a fair few VMs in addition to the usual workstations and laptops.
-  * it was frustrating keeping track of each IP address
-  * there are some things I'd like to do that would benefit from being able to use FQDNs on my network.
-  * I had a spare Raspberry Pi 3B not doing anything.  It's turned out to be more than powerful enough for dnsmasq.
-  * This project was quick and easy, so I could get on to the stuff I really wanted to play with.
+  - it was frustrating keeping track of each IP address
+    
+  - there are some things I'd like to do that would benefit from being able to use FQDNs on my network.
+    
+  - I had a spare Raspberry Pi 3B not doing anything.  It's turned out to be more than powerful enough for dnsmasq.
+    
+  - This project was quick and easy, so I could get on to the stuff I really wanted to play with.
 
 ### Installation
 install dnsmasq application, and dnsutils so you can see what's going on
